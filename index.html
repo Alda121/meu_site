@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário, Mamãe!</title>
+  <style>
+    body {
+      background: linear-gradient(to top right, #ffe6f0, #fff9f9);
+      color: #8e44ad;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px #f8c2d1;
+    }
+
+    .confete {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: pink;
+      border-radius: 50%;
+      animation: cair 5s linear infinite;
+    }
+
+    @keyframes cair {
+      0% { transform: translateY(-100px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Feliz Aniversário, Mamãe! 🎉</h1>
+  <p>Hoje é um dia muito especial, porque é o dia da pessoa mais incrível do mundo: você, mamãe! Obrigada por tudo que faz por mim. Eu te amo muito! 💖</p>
+
+  <img src="https://photos.app.goo.gl/7Wq4HZkTsQsQiqqDA" alt="Foto da mamãe">
+
+  <p>Desejo que seu dia seja cheio de amor, abraços, e muitos sorrisos! Você merece tudo de melhor! 🌷</p>
+
+  <script>
+    // Cria confetes fofos 🎊
+    for (let i = 0; i < 50; i++) {
+      let confete = document.createElement('div');
+      confete.className = 'confete';
+      confete.style.left = Math.random() * 100 + 'vw';
+      confete.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      confete.style.background = ['#f39c12', '#e74c3c', '#9b59b6', '#f8c2d1'][Math.floor(Math.random() * 4)];
+      document.body.appendChild(confete);
+    }
+  </script>
+</body>
+</html>
